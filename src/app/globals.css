@@ -2,26 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	font-family: var(--font-sans);
+}
+
+code {
+	font-family: var(--font-mono);
+}
+
+html,
+body {
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1.2rem;
+}
+h4 {
+	font-size: 1rem;
+}
+h5 {
+	font-size: 0.8rem;
+}
+h6 {
+	font-size: 0.7rem;
+}
+
+label,
+select,
+[type="radio"],
+[type="submit"],
+[type="checkbox"] {
+	font-family: var(--font-mono);
+}
+
+[data-theme="dracula"] .btn {
+	text-transform: lowercase;
+}
+
+.typed-cursor {
+	font-size: 2rem;
+	color: #ff7ac6;
 }
