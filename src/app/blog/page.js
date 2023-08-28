@@ -20,7 +20,7 @@ export default async function Blog() {
 			<div
 				id='blog'
 				className='w-full md:max-w-prose '>
-				<h1 className=' underline-offset-4 decoration-primary decoration-2 underline mb-4'>
+				<h1 className='underline-offset-4 decoration-primary decoration-2 underline mb-4'>
 					Blog
 				</h1>
 				<section id='blog-content flex'>

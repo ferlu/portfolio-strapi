@@ -41,7 +41,7 @@ export default async function Post({ params }) {
 
 	return (
 		<div>
-			<div className='flex flex-row justify-between items-center mb-10'>
+			<div className='flex flex-col md:flex-row justify-between items-center mb-10'>
 				<h1 className=' underline underline-offset-4 decoration-primary'>
 					{title}
 				</h1>
