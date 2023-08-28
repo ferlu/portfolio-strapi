@@ -12,7 +12,7 @@ export const Navbar = () => {
 			<div>
 				{ROUTES.map((route) => (
 					<Link
-						className='btn btn-sm mx-2 no-underline transition-all'
+						className='btn btn-sm mx-2 transition-all font-light'
 						href={route.href}
 						key={route.label}>
 						{route.label}

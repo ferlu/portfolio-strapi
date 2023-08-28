@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${sansFont.variable} ${monoFont.variable} flex flex-col bg-base-200`}>
 				<Navbar />
-				<div className='flex mx-auto w-full md:max-w-prose flex-grow py-6'>
+				<div className='flex mx-auto w-full md:max-w-prose flex-grow py-10 px-2'>
 					{children}
 				</div>
 			</body>

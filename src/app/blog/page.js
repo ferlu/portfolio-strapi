@@ -14,23 +14,26 @@ const getAllPosts = async () => {
 
 export default async function Blog() {
 	let allPosts = await getAllPosts();
+
 	return (
 		<ApolloWrapper>
 			<div
 				id='blog'
 				className='w-full md:max-w-prose '>
-				<h1>Blog</h1>
+				<h1 className=' underline-offset-4 decoration-primary decoration-2 underline mb-4'>
+					Blog
+				</h1>
 				<section id='blog-content flex'>
 					{allPosts.map((post, i) => {
 						return (
 							<Link
 								key={i}
 								href={`/blog/${post.attributes.urlSlug}`}>
-								<div className='card w-100 my-4 p-2 transition-all px-2 hover:bg-secondary/10'>
-									<h2 className='text-primary font-semibold no-underline'>
-										{post.attributes.title}
-									</h2>
-									<p>{post.attributes.description}</p>
+								<div className='border-transparent hover:border-l-neutral rounded-sm w-100 p-4 my-2 transition-all hover:bg-neutral/50 border-l-4'>
+									<h2 className='text-primary'>{post.attributes.title}</h2>
+									<p className='font-mono text-neutral-content text-sm'>
+										{post.attributes.description}
+									</p>
 								</div>
 							</Link>
 						);

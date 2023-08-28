@@ -34,6 +34,7 @@ const GET_INDIVIDUAL_POST = gql`
 				attributes {
 					title
 					content
+					publishedAt
 				}
 			}
 		}

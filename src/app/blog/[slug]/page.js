@@ -1,6 +1,6 @@
 import React from "react";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import { getClient } from "../../_lib/apollo/client";
 import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from "../../_graphql/queries";
 
@@ -25,22 +25,29 @@ async function getPost(params) {
 	});
 
 	const attrs = data.blogPosts.data[0].attributes;
-	const html = await serialize(attrs.content);
+	const formattedDate = new Date(attrs.publishedAt).toDateString();
+	const formattedTime = new Date(attrs.publishedAt).toTimeString();
 
 	return {
 		title: attrs.title,
-		content: html,
+		content: attrs.content,
+		date: formattedDate,
+		// time: formattedTime,
 	};
 }
 
 export default async function Post({ params }) {
-	const { title, content } = await getPost(params);
-	console.log("🚀 ~ file: page.js:36 ~ Post ~ post:", title, content);
+	const { title, content, date, time } = await getPost(params);
 
 	return (
 		<div>
-			<h1>{title}</h1>
-			{/* <MDXRemote source={content} /> */}
+			<div className='flex flex-row justify-between items-center mb-10'>
+				<h1 className=' underline underline-offset-4 decoration-primary'>
+					{title}
+				</h1>
+				<div className='badge badge-neutral'>{date}</div>
+			</div>
+			<MDXRemote source={content} />
 		</div>
 	);
 }
