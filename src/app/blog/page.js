@@ -29,9 +29,9 @@ export default async function Blog() {
 							<Link
 								key={i}
 								href={`/blog/${post.attributes.urlSlug}`}>
-								<div className='border-transparent hover:border-l-neutral rounded-sm w-100 p-4 my-2 transition-all hover:bg-neutral/50 border-l-4'>
+								<div className='border-transparent hover:border-l-primary rounded-sm w-100 p-4 my-2 transition-all hover:bg-primary/20 border-l-4'>
 									<h2 className='text-primary'>{post.attributes.title}</h2>
-									<p className='font-mono text-neutral-content text-sm'>
+									<p className='font-mono text-sm'>
 										{post.attributes.description}
 									</p>
 								</div>

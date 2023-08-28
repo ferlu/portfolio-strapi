@@ -65,7 +65,7 @@ select,
 	font-family: var(--font-mono);
 }
 
-[data-theme="dracula"] .btn {
+.btn {
 	text-transform: lowercase;
 }
 

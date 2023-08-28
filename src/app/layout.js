@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html
 			lang='en'
-			data-theme='dracula'>
+			data-theme=''>
 			<body
 				className={`${sansFont.variable} ${monoFont.variable} flex flex-col bg-base-200`}>
 				<Navbar />

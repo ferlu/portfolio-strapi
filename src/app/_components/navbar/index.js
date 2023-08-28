@@ -6,11 +6,12 @@ import { ROUTES } from "@/app/_lib/constants";
 export const Navbar = () => {
 	return (
 		<div className='navbar bg-base-100 font-mono justify-between flex'>
-			<a
-				className='decoration-1 normal-case px-2 cursor-pointer hover:text-primary transition-all'
+			<Link
+				className='decoration-1 normal-case px-2 cursor-pointer hover:text-primary transition-all '
 				href='/'>
 				🌊 fernanda.codes
-			</a>
+			</Link>
+
 			<div>
 				<div className='hidden md:flex'>
 					{ROUTES.map((route) => (

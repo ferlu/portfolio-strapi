@@ -6,7 +6,8 @@ module.exports = {
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	daisyui: {
-		themes: ["dracula", "lofi"],
+		themes: ["winter", "dracula"],
+		darkTheme: "dracula",
 	},
 	theme: {
 		extend: {
