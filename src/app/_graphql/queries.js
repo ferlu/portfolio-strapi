@@ -17,6 +17,7 @@ const GET_ALL_POSTS = gql`
 		blogPosts {
 			data {
 				attributes {
+					publishedAt
 					title
 					description
 					urlSlug

@@ -9,7 +9,6 @@ const getAllPosts = async () => {
 	const { data } = await getClient().query({
 		query: GET_ALL_POSTS,
 	});
-	console.log(data.blogPosts);
 	return data.blogPosts.data;
 };
 
@@ -19,21 +18,24 @@ export default async function Blog() {
 		<ApolloWrapper>
 			<div
 				id='blog'
-				className='container mx-auto w-full md:max-w-prose'>
+				className='w-full md:max-w-prose '>
 				<h1>Blog</h1>
-				{allPosts.map((post, i) => {
-					console.log(post);
-					return (
-						<Link
-							key={i}
-							href={post.attributes.urlSlug}>
-							<div className='card'>
-								<p className='text-primary text-xl'>{post.attributes.title}</p>
-								<p>{post.attributes.description}</p>
-							</div>
-						</Link>
-					);
-				})}
+				<section id='blog-content flex'>
+					{allPosts.map((post, i) => {
+						return (
+							<Link
+								key={i}
+								href={`/blog/${post.attributes.urlSlug}`}>
+								<div className='card w-100 my-4 p-2 transition-all px-2 hover:bg-secondary/10'>
+									<h2 className='text-primary font-semibold no-underline'>
+										{post.attributes.title}
+									</h2>
+									<p>{post.attributes.description}</p>
+								</div>
+							</Link>
+						);
+					})}
+				</section>
 			</div>
 		</ApolloWrapper>
 	);
