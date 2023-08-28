@@ -1,4 +1,5 @@
 import { Navbar } from "./_components/navbar";
+
 import { sansFont, monoFont } from "./fonts";
 import "./globals.css";
 
