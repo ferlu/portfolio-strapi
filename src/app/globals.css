@@ -45,6 +45,33 @@ h6 {
 	font-size: 0.7rem;
 }
 
+#home {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-sans);
+		font-weight: bold;
+		text-shadow: none;
+		text-decoration: none;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-mono);
+	font-weight: bold;
+	/* text-shadow: -2px 2px #ff7ac5e7; */
+	text-decoration: underline #ff7ac6;
+	text-underline-offset: 6px;
+}
+
 label,
 select,
 [type="radio"],

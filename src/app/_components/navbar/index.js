@@ -1,4 +1,4 @@
-import { ROUTES } from "@/app/_lib/_constants";
+import { ROUTES } from "@/app/lib/_constants";
 import Link from "next/link";
 
 export const Navbar = () => {

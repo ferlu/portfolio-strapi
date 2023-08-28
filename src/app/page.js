@@ -19,19 +19,19 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div className='hero-content align-top text-left'>
-			<div className='max-w-2xl'>
-				<h1 className='text-4xl font-extrabold md:text-4xl'>Hey there.</h1>
-				<h2 className='text-3xl font-bold'>
-					I&apos;m Fer, a{" "}
-					<span
-						className='bg-clip-text text-transparent bg-gradient-to-r from-secondary/80 to-primary/80'
-						ref={el}
-					/>
-					<br></br> with lots of things to{" "}
-					<span className='line-through italic'>rant</span> write about.
-				</h2>
-			</div>
+		<div
+			id='home'
+			className='max-w-2xl mt-48 font-sans'>
+			<h1 className='text-4xl font-extrabold md:text-4xl'>Hey there.</h1>
+			<h2 className='text-3xl font-bold'>
+				I&apos;m Fer, a{" "}
+				<span
+					className='bg-clip-text text-transparent bg-gradient-to-r from-secondary/80 to-primary/80'
+					ref={el}
+				/>
+				<br></br> with lots of things to{" "}
+				<span className='line-through italic'>rant</span> write about.
+			</h2>
 		</div>
 	);
 }
