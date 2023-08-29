@@ -38,7 +38,7 @@ export default function Home() {
 				<a href='https://linkedin.com/in/fernandalu'>
 					<button className='btn btn-square bg-base-200'>
 						<svg
-							class='h-6 w-6 text-primary'
+							className='h-6 w-6 text-primary'
 							viewBox='0 0 24 24'
 							fill='none'
 							stroke='currentColor'
@@ -64,7 +64,7 @@ export default function Home() {
 				<a href='https://github.com/ferlu'>
 					<button className='btn btn-square bg-base-200'>
 						<svg
-							class='h-6 w-6 text-primary'
+							className='h-6 w-6 text-primary'
 							width='24'
 							height='24'
 							viewBox='0 0 24 24'

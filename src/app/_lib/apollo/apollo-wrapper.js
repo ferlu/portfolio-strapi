@@ -10,7 +10,7 @@ import {
 
 function makeClient() {
 	const httpLink = new HttpLink({
-		uri: "http://127.0.0.1:1337/graphql",
+		uri: process.env.STRAPI_URL,
 		fetchOptions: { cache: "no-store" },
 	});
 

@@ -5,7 +5,7 @@ export const { getClient } = registerApolloClient(() => {
 	return new ApolloClient({
 		cache: new InMemoryCache(),
 		link: new HttpLink({
-			uri: "http://127.0.0.1:1337/graphql",
+			uri: process.env.STRAPI_URL,
 		}),
 	});
 });
