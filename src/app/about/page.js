@@ -3,7 +3,7 @@ const About = () => {
 	return (
 		<div
 			id='about'
-			className='container mx-auto w-full md:max-w-prose'>
+			className='mx-auto w-full'>
 			<h1 className='decoration-primary underline-offset-4 decoration-2 underline mb-4'>
 				About
 			</h1>

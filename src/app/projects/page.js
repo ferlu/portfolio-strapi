@@ -2,7 +2,7 @@ const Projects = () => {
 	return (
 		<div
 			id='projects'
-			className='container mx-auto w-full md:max-w-prose'>
+			className='mx-auto w-full'>
 			<h1 className='decoration-primary underline-offset-4 decoration-2 underline mb-4'>
 				Projects
 			</h1>

@@ -22,10 +22,10 @@ export default function Home() {
 	return (
 		<div
 			id='home'
-			className='max-w-2xl mt-48 font-sans'>
+			className='mx-auto w-full mt-28'>
 			<h1 className='text-4xl font-extrabold md:text-4xl'>Hey there.</h1>
 			<h2 className='text-3xl font-bold'>
-				I&apos;m Fer Luna, a{" "}
+				I&apos;m Fer Luna, a <br className=' display sm:hidden' />{" "}
 				<span
 					className='bg-clip-text text-transparent bg-gradient-to-r from-secondary/80 to-primary/80'
 					ref={el}

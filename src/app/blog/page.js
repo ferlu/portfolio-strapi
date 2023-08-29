@@ -19,7 +19,7 @@ export default async function Blog() {
 		<ApolloWrapper>
 			<div
 				id='blog'
-				className='w-full md:max-w-prose '>
+				className='mx-auto w-full'>
 				<h1 className='underline-offset-4 decoration-primary decoration-2 underline mb-4'>
 					Blog
 				</h1>

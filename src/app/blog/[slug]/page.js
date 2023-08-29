@@ -26,7 +26,7 @@ async function getPost(params) {
 
 	const attrs = data.blogPosts.data[0].attributes;
 	const formattedDate = new Date(attrs.publishedAt).toDateString();
-	const formattedTime = new Date(attrs.publishedAt).toTimeString();
+	// const formattedTime = new Date(attrs.publishedAt).toTimeString();
 
 	return {
 		title: attrs.title,
@@ -37,10 +37,10 @@ async function getPost(params) {
 }
 
 export default async function Post({ params }) {
-	const { title, content, date, time } = await getPost(params);
+	const { title, content, date } = await getPost(params);
 
 	return (
-		<div>
+		<div className='mx-auto w-full'>
 			<div className='flex flex-col md:flex-row justify-between items-center mb-10'>
 				<h1 className=' underline underline-offset-4 decoration-primary'>
 					{title}
